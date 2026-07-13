@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дигридское золото — Боевое фэнтези</title>
+    <!-- Google Fonts: Cormorant Garamond for elegant serif, Inter for modern body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Header navigation overlaid at the top of Hero -->
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="nav-links">
+                <button class="nav-tab active" data-book="0">Дигридское<br>золото (I)</button>
+                <span class="nav-separator">|</span>
+                <button class="nav-tab" data-book="1">Достойный<br>сын (II)</button>
+                <span class="nav-separator">|</span>
+                <button class="nav-tab" data-book="2">Степные<br>гончие (III)</button>
+                <span class="nav-separator">|</span>
+                <button class="nav-tab" data-book="3">Легион<br>и сияние</button>
+            </div>
+            <a href="#where-to-read" class="btn-read">Читать</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Background character and wing layer positioned absolutely on the right -->
+            <div class="hero-bg-layer">
+                <img id="hero-img" src="book-1/hero-bg.webp" alt="Иллюстрация персонажа" class="hero-main-img">
+            </div>
+
+            <!-- Foreground text overlaid on the left -->
+            <div class="hero-container">
+                <div class="hero-text-side">
+                    <div class="book-title-container">
+                        <img id="book-title-img" src="book-1/dz-name.png" alt="ДИГРИДСКОЕ ЗОЛОТО" class="book-title-img"
+                            style="display: none;">
+                        <div id="book-title-fallback" class="title-fallback-wrapper">
+                            <h1 class="book-title">ДИГРИДСКОЕ ЗОЛОТО</h1>
+                            <div class="gold-divider">
+                                <span class="gold-line"></span>
+                                <span class="gold-diamond"></span>
+                                <span class="gold-line"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="book-subtitle" class="book-subtitle">Боевое фэнтези, авторский мир</p>
+
+                    <blockquote id="book-quote" class="book-quote">
+                        Они пытаются обучить тех, кого принято бояться, но цена выше, чем кажется.
+                    </blockquote>
+
+                    <!-- Quotes Slider Badge Carousel -->
+                    <div class="slider-badge-container">
+                        <div class="slider-badge">
+                            <button class="slider-arrow prev" id="quote-prev" aria-label="Предыдущая цитата">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <polyline points="15 18 9 12 15 6" />
+                                </svg>
+                            </button>
+                            <div class="slider-text-wrapper">
+                                <div class="slider-text-track" id="quotes-track">
+                                    <span class="slider-text active">Цитата 1</span>
+                                    <span class="slider-text">Цитата 2</span>
+                                    <span class="slider-text">Цитата 3</span>
+                                </div>
+                            </div>
+                            <button class="slider-arrow next" id="quote-next" aria-label="Следующая цитата">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="slider-dots" id="quotes-dots">
+                            <span class="carousel-dot active" data-index="0"></span>
+                            <span class="carousel-dot" data-index="1"></span>
+                            <span class="carousel-dot" data-index="2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transition down indicator circle overlapping the bottom border -->
+            <div class="scroll-divider-wrapper">
+                <div class="scroll-divider-circle"></div>
+            </div>
+        </section>
+
+        <!-- Annotation & Reviews Combined Section -->
+        <section class="combined-section">
+            <!-- Shared Dynamic Background Wrapper -->
+            <div class="combined-bg-wrapper">
+                <img id="combined-bg-img" src="book-1/reviews-bg.png" alt="Декоративная иллюстрация" class="combined-decor-img">
+                <img id="combined-flowers-img" src="book-1/flowers.png" alt="Лепестки" class="combined-flowers-img">
+            </div>
+
+            <!-- Single Container wrapping both parts -->
+            <div class="combined-container">
+                <!-- Annotation Part -->
+                <div class="annotation-row">
+                    <div class="annotation-text-side">
+                        <h2 class="section-title">АННОТАЦИЯ</h2>
+                        <p id="annotation-text" class="annotation-paragraph">
+                            В этой стране, в Дигриде-Саха, давно живут создатели маги, которые привыкли держать власть при
+                            себе. Их почитают, потому что они защищают людей от странных нападений из безлюдной степи. К
+                            другим магам, например, к усмерам, создатели относятся холодно. Несмотря на это, Радис Сфета
+                            возвращается в родное поместье в провинции Дигриды и становится земельной госпожой. Она
+                            собирается создать первый в истории страны учебный корпус для усмеров. Но не успевает девушка
+                            приняться за выполнение планов, как на город в её владениях нападают. Радис отбивает атаку и
+                            пытается понять, кто на самом деле может желать ей неудачи.
+                        </p>
+                        <div class="annotation-meta">
+                            <p id="annotation-meta-status" class="meta-item">Чистовик, электронная версия</p>
+                            <p id="annotation-meta-cycle" class="meta-item">Первая книга цикла</p>
+                        </div>
+                    </div>
+                    <div class="annotation-image-side">
+                        <div class="art-slider-badge-container">
+                            <div class="annotation-img-frame art-slider">
+                                <button class="art-slider-arrow prev" id="art-prev" aria-label="Предыдущий арт">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8">
+                                        <polyline points="15 18 9 12 15 6" />
+                                    </svg>
+                                </button>
+                                <div class="art-slider-wrapper">
+                                    <div class="art-slider-track" id="art-track">
+                                        <!-- Dynamic slides will be injected here by script.js -->
+                                    </div>
+                                </div>
+                                <button class="art-slider-arrow next" id="art-next" aria-label="Следующий арт">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8">
+                                        <polyline points="9 18 15 12 9 6" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="art-slider-dots" id="art-dots">
+                                <!-- Dynamic dots will be injected here by script.js -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Part -->
+                <div class="reviews-row">
+                    <!-- Header with title and button inline on the same row exactly as in design -->
+                    <div class="reviews-header">
+                        <h2 class="section-title">ОТЗЫВЫ</h2>
+                        <a href="#" id="link-reviews" class="btn-read" target="_blank" rel="noopener noreferrer">Подробнее</a>
+                    </div>
+                    <div class="reviews-content">
+                        <div class="reviews-carousel" id="reviews-carousel">
+                            <div class="reviews-track-wrapper">
+                                <div class="reviews-track" id="reviews-track">
+                                    <!-- Dynamic slides will be injected here by script.js -->
+                                </div>
+                            </div>
+                            <!-- Navigation Controls -->
+                            <div class="reviews-controls">
+                                <button class="reviews-arrow prev" id="reviews-prev" aria-label="Предыдущий отзыв">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8">
+                                        <polyline points="15 18 9 12 15 6" />
+                                    </svg>
+                                </button>
+                                <div class="reviews-dots" id="reviews-dots">
+                                    <!-- Dynamic dots will be injected here by script.js -->
+                                </div>
+                                <button class="reviews-arrow next" id="reviews-next" aria-label="Следующий отзыв">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8">
+                                        <polyline points="9 18 15 12 9 6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Where to Read Section -->
+        <section class="read-section" id="where-to-read">
+            <!-- Semi-transparent horizontal band (плашка) -->
+            <div class="read-band">
+                <div class="read-container">
+                    <!-- Left Side: Title and Small Buttons -->
+                    <div class="read-left-side">
+                        <h2 class="read-section-title">ГДЕ ПОЧИТАТЬ?</h2>
+                        <div class="small-platforms-row">
+                            <!-- Wattpad Card -->
+                            <a href="https://www.wattpad.com/story/397324947-%D0%B4%D0%B8%D0%B3%D1%80%D0%B8%D0%B4%D1%81%D0%BA%D0%BE%D0%B5-%D0%B7%D0%BE%D0%BB%D0%BE%D1%82%D0%BE"
+                                id="link-wattpad" class="platform-card small-card" target="_blank"
+                                rel="noopener noreferrer">
+                                <h3 class="platform-name">WATTPAD</h3>
+                                <span class="platform-status">Бесплатно</span>
+                            </a>
+                            <!-- Litres Card -->
+                            <a href="https://www.litres.ru/book/nora-dutt/digridskoe-zoloto-66215580/" id="link-litres"
+                                class="platform-card small-card" target="_blank" rel="noopener noreferrer">
+                                <h3 class="platform-name">ЛИТРЕС</h3>
+                                <span class="platform-status">Бесплатно</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Telegram Wide Card -->
+                    <div class="read-right-side">
+                        <a href="https://t.me/plot_nora/1446" id="link-telegram" class="platform-card wide-card"
+                            target="_blank" rel="noopener noreferrer">
+                            <div class="wide-info">
+                                <h3 class="platform-name">TELEGRAM:<br>ПОСТ СО ВСЕМИ ГЛАВАМИ</h3>
+                                <span class="platform-status">Бесплатно</span>
+                            </div>
+                            <div class="avatar-holder">
+                                <img src="tg-picture.png" alt="Автор аватара" class="avatar-img">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">КОНТАКТЫ</h3>
+                <div class="footer-links">
+                    <a href="mailto:eleonora.dutt@gmail.com" class="footer-link">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        eleonora.dutt@gmail.com
+                    </a>
+                    <a href="https://t.me/nora_dutt" target="_blank" class="footer-link">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M21.13 2.82a1.62 1.62 0 0 0-1.4-.32L2.6 7.9a1.49 1.49 0 0 0-.15 2.78l5.24 2.21a1.27 1.27 0 0 0 1.25-.13l9-6.3a.43.43 0 0 1 .6.6l-6.3 9a1.27 1.27 0 0 0-.13 1.25l2.21 5.24a1.49 1.49 0 0 0 2.78-.15l5.4-17.13a1.62 1.62 0 0 0-.32-1.4z" />
+                        </svg>
+                        @nora_dutt
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">СОЦ. СЕТИ</h3>
+                <div class="footer-links">
+                    <span class="footer-static-text">TikTok: @nora_dutt_writer</span>
+                    <a href="https://t.me/plot_nora" target="_blank" class="footer-link">
+                        TG Канал t.me/plot_nora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Gallery Modal -->
+    <div id="gallery-lightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Закрыть">&times;</button>
+            <button class="lightbox-arrow prev" aria-label="Предыдущее изображение">&#10094;</button>
+            <div class="lightbox-image-wrapper">
+                <img id="lightbox-img" src="" alt="Изображение галереи">
+            </div>
+            <button class="lightbox-arrow next" aria-label="Следующее изображение">&#10095;</button>
+            <div class="lightbox-dots" id="lightbox-dots"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
